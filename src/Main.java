@@ -3,6 +3,7 @@ import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.function.BooleanSupplier;
+import java.util.jar.Pack200;
 
 public class Main {
 
@@ -32,6 +33,10 @@ public class Main {
         System.out.println("Quesiton 1.4 Test Cases:");
         char[] charArrays = new char[]{'F',' ', 'u', ' ', 'a', ' ', 'd',' ', ' ', ' ', ' ', ' ', ' '};
         System.out.println(replaceSpace(charArrays,7));
+
+        System.out.println("Question 1.5 Test Cases:");
+        System.out.println(stringCompression("aaaaaabbbbbbbccccccc"));
+        System.out.println(stringCompression("abcd"));
     }
 
     private static HashMap<Integer, Student> buildMap(Student[] students) {
@@ -147,7 +152,7 @@ public class Main {
        What about if the given string is only spaces?
        */
     //TODO: Finish this problem
-    public static String replaceSpace(char[] charStr, int length) {
+    private static String replaceSpace(char[] charStr, int length) {
         int spaceCount = 0, newLength, i;
         for (i = 0; i < length; i++) {
             if (charStr[i] == ' ') {
@@ -168,5 +173,45 @@ public class Main {
             }
         }
         return new String(charStr);
+    }
+
+    /* Interview Question 1.5 Implement a method to perform basic string compression using
+    the counts of repeated characters. For example, the string aabcccccaaa would become
+    a2b1c5a3. If the "compressed" string would not become smaller than the orignal string,
+    your method should return the original string.
+
+    1) Questions:
+    case sensitive? what to do with null inputs? In-place?
+
+    ALWAYS USE STRINGBUFFER because when concatenating strings the cost of iteration increases,
+    while that working with buffer it doesn't
+     */
+
+    private static String stringCompression(String str) {
+        int originalSize = str.length();
+        StringBuffer myBuffer = new StringBuffer();
+        if (str == null) {
+            return "Input is null";
+        }
+        char currentChar = str.charAt(0);
+        myBuffer.append(currentChar);
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char iterationChar = str.charAt(i);
+            if (currentChar == iterationChar) {
+                count++;
+            } else {
+                myBuffer.append(count);
+                currentChar = str.charAt(i);
+                myBuffer.append(currentChar);
+                count = 1;
+            }
+        }
+        myBuffer.append(count);
+        if (myBuffer.length() < str.length()) {
+            return myBuffer.toString();
+        } else {
+            return str;
+        }
     }
 }
