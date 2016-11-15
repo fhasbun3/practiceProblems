@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 
-public class Main {
+public class chapter1 {
 
     public static void main(String[] args) {
         Student seniorStudent = new Student(902);
@@ -291,7 +291,11 @@ public class Main {
                 }
             }
         }
-
         return matrix;
     }
+
+    /* Interview Question 1.8: Assume you have a method isSubstring which checks if one
+    word is a substring of another. Gien two strings, s1 and s2, write code to check if s2
+    is a rotation of s1 using only one call to isSubstring
+     */
 }
