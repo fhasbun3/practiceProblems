@@ -1,10 +1,7 @@
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.function.BooleanSupplier;
-import java.util.jar.Pack200;
+
 
 public class Main {
 
@@ -15,7 +12,7 @@ public class Main {
 
         System.out.println(buildMap(studentArr));
         String[] words = {"Hi", "my name is"};
-        String [] more = {" Fuad"};
+        String[] more = {" Fuad"};
         System.out.println(merge(words, more));
 
         String name = "ffff";
@@ -32,22 +29,31 @@ public class Main {
         System.out.println(isPermuation("Fuadd", "daduF"));
 
         System.out.println("Quesiton 1.4 Test Cases:");
-        char[] charArrays = new char[]{'F',' ', 'u', ' ', 'a', ' ', 'd',' ', ' ', ' ', ' ', ' ', ' '};
-        System.out.println(replaceSpace(charArrays,7));
+        char[] charArrays = new char[]{'F', ' ', 'u', ' ', 'a', ' ', 'd', ' ', ' ', ' ', ' ', ' ', ' '};
+        System.out.println(replaceSpace(charArrays, 7));
 
         System.out.println("Question 1.5 Test Cases:");
         System.out.println(stringCompression("aaaaaabbbbbbbccccccc"));
         System.out.println(stringCompression("abcd"));
 
         System.out.println("Question 1.6 Test Cases:");
-        int[][] myArr = new int[][] {
-                {1,2,3,4},
-                {5,6,7,8},
-                {9,10,11,12},
-                {13,14,15,16},
+        int[][] myArr = new int[][]{
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 15, 16},
         };
         int nVal = 4;
-        System.out.println(Arrays.deepToString(rotate90(myArr,nVal)));
+        System.out.println(Arrays.deepToString(rotate90(myArr, nVal)));
+
+        System.out.println("Question 1.6 Test Cases:");
+        int[][] zeroArr = new int[][]{
+                {1, 0, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 0, 16},
+        };
+        System.out.println(Arrays.deepToString(matrixZero(zeroArr)));
     }
 
     private static HashMap<Integer, Student> buildMap(Student[] students) {
@@ -258,5 +264,34 @@ public class Main {
             }
         }
         return img;
+    }
+
+    /* Interview Question 1.7: Write an algorithm such that if an element in an MxN matrix
+    is 0, its entire row and column are set to 0
+
+    1)Questions
+    in place?
+     */
+
+    private static int[][] matrixZero(int[][] matrix) {
+        boolean[] row = new boolean[matrix.length];
+        boolean[] col = new boolean[matrix[0].length];
+        for(int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if (matrix[i][j] == 0) {
+                    row[i] = true;
+                    col[j] = true;
+                }
+            }
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                if(row[i] || col[j]) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+
+        return matrix;
     }
 }
