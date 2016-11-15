@@ -17,15 +17,21 @@ public class Main {
         System.out.println(merge(words, more));
 
         String name = "ffff";
+        System.out.println("Question 1.1 Test Cases:");
         System.out.println(uniqueChars("abcd"));
         System.out.println(uniqueChars("aaaa"));
         System.out.println(uniqueChars(null));
         System.out.println(uniqueChars("aaabbb"));
 
+        System.out.println("Question 1.2 Test Cases:");
         System.out.println(reverse("Fuad"));
 
+        System.out.println("Question 1.3 Test Cases:");
         System.out.println(isPermuation("Fuadd", "daduF"));
 
+        System.out.println("Quesiton 1.4 Test Cases:");
+        char[] charArrays = new char[]{'F',' ', 'u', ' ', 'a', ' ', 'd',' ', ' ', ' ', ' ', ' ', ' '};
+        System.out.println(replaceSpace(charArrays,7));
     }
 
     private static HashMap<Integer, Student> buildMap(Student[] students) {
@@ -113,16 +119,16 @@ public class Main {
             HashMap<Integer, Integer> myHashmapStr1 = new HashMap<>();
             HashMap<Integer, Integer> myHashmapStr2 = new HashMap<>();
             for (int i = 0; i < str1.length(); i++) {
-                System.out.println(myHashmapStr1.get((int) str1.charAt(i)));
+//                System.out.println(myHashmapStr1.get((int) str1.charAt(i)));
                 if(!myHashmapStr1.containsKey((int) str1.charAt(i))) {
                     myHashmapStr1.put((int) str1.charAt(i), 0);
-                    System.out.println(myHashmapStr1.get((int) str1.charAt(i)));
+//                    System.out.println(myHashmapStr1.get((int) str1.charAt(i)));
                 }
                 if(!myHashmapStr2.containsKey((int) str2.charAt(i))) {
                     myHashmapStr2.put((int) str2.charAt(i), 0);
                 }
-                System.out.println("Current Key: " + (int) str1.charAt(i));
-                System.out.println("Current Value: " + myHashmapStr1.get((int) str1.charAt(i)));
+//                System.out.println("Current Key: " + (int) str1.charAt(i));
+//                System.out.println("Current Value: " + myHashmapStr1.get((int) str1.charAt(i)));
                 myHashmapStr1.put((int) str1.charAt(i), myHashmapStr1.get((int) str1.charAt(i)) + 1);
                 myHashmapStr2.put((int) str2.charAt(i), myHashmapStr2.get((int) str2.charAt(i)) + 1);
             }
@@ -138,19 +144,29 @@ public class Main {
        1) Questions
        will the input be a character array? Do you want me to return the char[] or a string?
        does the character array also have those extra spaces? Index out of bounds?
+       What about if the given string is only spaces?
        */
     //TODO: Finish this problem
-    public static String replaceSpace(char[] charStr) {
-        if (charStr == null) {
-            return "Your String is null";
-        } else {
-            for (int i = 0; i < charStr.length; i++) {
-                if (charStr[i] == ' ') {
-
-                }
+    public static String replaceSpace(char[] charStr, int length) {
+        int spaceCount = 0, newLength, i;
+        for (i = 0; i < length; i++) {
+            if (charStr[i] == ' ') {
+                spaceCount++;
             }
         }
-
-
+        newLength = length + spaceCount*2;
+        charStr[newLength - 1] = '\0';
+        for (i = length - 1; i >= 0; i--) {
+            if (charStr[i] == ' ') {
+                charStr[newLength - 1] = '0';
+                charStr[newLength - 2] = '2';
+                charStr[newLength - 3] = '%';
+                newLength = newLength - 3;
+            } else {
+                charStr[newLength - 1] = charStr[i];
+                newLength = newLength - 1;
+            }
+        }
+        return new String(charStr);
     }
 }
