@@ -1,6 +1,7 @@
 import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.function.BooleanSupplier;
 import java.util.jar.Pack200;
@@ -37,6 +38,16 @@ public class Main {
         System.out.println("Question 1.5 Test Cases:");
         System.out.println(stringCompression("aaaaaabbbbbbbccccccc"));
         System.out.println(stringCompression("abcd"));
+
+        System.out.println("Question 1.6 Test Cases:");
+        int[][] myArr = new int[][] {
+                {1,2,3,4},
+                {5,6,7,8},
+                {9,10,11,12},
+                {13,14,15,16},
+        };
+        int nVal = 4;
+        System.out.println(Arrays.deepToString(rotate90(myArr,nVal)));
     }
 
     private static HashMap<Integer, Student> buildMap(Student[] students) {
@@ -141,7 +152,7 @@ public class Main {
         }
     }
 
-    /* Interview Question 1.4 Write a method to replace all spaces in a string with '%20'. You may
+    /* Interview Question 1.4: Write a method to replace all spaces in a string with '%20'. You may
        assume that the string has sufficient space at the end of the string to hold the additional
        characters, and that you are given the "true" length of the string. (Note: if implementing
        in Java, please use a character array so that you can perform this operation in place.)
@@ -175,7 +186,7 @@ public class Main {
         return new String(charStr);
     }
 
-    /* Interview Question 1.5 Implement a method to perform basic string compression using
+    /* Interview Question 1.5: Implement a method to perform basic string compression using
     the counts of repeated characters. For example, the string aabcccccaaa would become
     a2b1c5a3. If the "compressed" string would not become smaller than the orignal string,
     your method should return the original string.
@@ -213,5 +224,39 @@ public class Main {
         } else {
             return str;
         }
+    }
+
+    /* Interview Question 1.6: Given an image represented by an NxN matrix, where each pixel
+    in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this
+    in place?
+
+    1)Questions:
+    What input am I given? I'll assume it is a 2D array, with ints as its 4byte color value
+     */
+
+    private static int[][] rotate90(int[][] img, int n) {
+        for (int layer = 0; layer < (n/2); layer++) {
+            int first = layer;
+            int last = n - 1 - layer;
+            for (int i = first; i < last; i++) {
+                int offset = i - first;
+
+                //save the top value
+                int top = img[first][i];
+
+                //put left value on top
+                img[first][i] = img[last - offset][first];
+
+                //put bottom on left
+                img[last - offset][first] = img[last][last - offset];
+
+                //put right on bottom
+                img[last][last - offset] = img[i][last];
+
+                //put top on right
+                img[i][last] = top;
+            }
+        }
+        return img;
     }
 }
