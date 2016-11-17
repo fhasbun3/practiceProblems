@@ -31,6 +31,20 @@ public class SinglyLinkedListTest {
         assertEquals(6, myList.head.next.next.next.getData());
         assertEquals(4, myList.head.next.next.next.next.getData());
         assertEquals(null, myList.head.next.next.next.next.next);
+    }
 
+    @Test
+    public void kthToLastElementTest() {
+        SinglyLinkedList myList = new SinglyLinkedList();
+        myList.addToBack(2);
+        myList.addToBack(5);
+        myList.addToBack(8);
+        myList.addToBack(6);
+        myList.addToBack(5);
+        myList.addToBack(4);
+        myList.addToBack(2);
+
+        assertEquals(4, myList.kthToLastElement(1));
+        assertEquals(2, myList.kthToLastElement(0));
     }
 }

@@ -73,12 +73,28 @@ public class SinglyLinkedList {
 
     }
 
-    public static void main(String[] args) {
-        SinglyLinkedList myList = new SinglyLinkedList();
-        Node node2 = new Node(2);
-        myList.addToFront(1);
-        myList.addToBack(4);
-        myList.addToBack(8);
-        System.out.println(myList.size);
+    /**
+     * Interview Question 2.2: Implement an algorithm to find the kth to last element of a
+     * singly linked list
+     *
+     * Questions:
+     * In-place? Example: 1,4,2,7,4,5 where k=2 would the answer be 7? Are we provided size
+     * of list? Do I have to worry about k beign to big?
+     * @param k kth to last element
+     * @return the kth element in the SLL
+     */
+    public int kthToLastElement(int k) {
+        int size = 0;
+        Node ptr1 = head;
+        while(ptr1.next != null) {
+            ptr1 = ptr1.next;
+            size++;
+        }
+        Node kth = head;
+        for (int i = 0; i <= (size-1) - k; i++) {
+            kth = kth.next;
+        }
+        return kth.getData();
     }
+
 }
