@@ -16,6 +16,20 @@ public class SinglyLinkedList {
         size++;
     }
 
+    public void addNode(Node n) {
+        Node currentNode = head;
+        if (head == null) {
+            head = n;
+            size++;
+        } else {
+            while ((currentNode.next != null)) {
+                currentNode = currentNode.next;
+            }
+            currentNode.next = n;
+            size++;
+        }
+    }
+
     /**
      * Add a node to back of SLL
      * @param data
@@ -95,6 +109,25 @@ public class SinglyLinkedList {
             kth = kth.next;
         }
         return kth.getData();
+    }
+
+    /**
+     * Interview Question 2.3: Implement an algorithm to delete a node in the middle
+     * of a singly linked list, given only access to that node
+     *
+     * Questions:
+     * Can we assume that the length of the linked list will be odd?
+     * If not, what do we consider middle?
+     * @param nodeToDelete
+     */
+    public void middleDelete(Node nodeToDelete) {
+        if (nodeToDelete == null || nodeToDelete.next == null) {
+            System.out.println("Cannot delete null node and/or last element");
+        } else {
+            Node nextNode = nodeToDelete.next;
+            nodeToDelete.data = nextNode.getData();
+            nodeToDelete.next = nextNode.next;
+        }
     }
 
 }

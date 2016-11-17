@@ -1,3 +1,4 @@
+import javafx.scene.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -46,5 +47,28 @@ public class SinglyLinkedListTest {
 
         assertEquals(4, myList.kthToLastElement(1));
         assertEquals(2, myList.kthToLastElement(0));
+    }
+
+    @Test
+    public void middleDeleteTest() {
+        SinglyLinkedList myList = new SinglyLinkedList();
+        Node two = new Node(2);
+        Node five = new Node(5);
+        Node eight = new Node(8);
+        Node six = new Node(6);
+        Node five2 = new Node(5);
+        Node four = new Node(4);
+        Node two2 = new Node(2);
+        myList.addNode(two);
+        myList.addNode(five);
+        myList.addNode(eight);
+        myList.addNode(six);
+        myList.addNode(five2);
+        myList.addNode(four);
+        myList.addNode(two2);
+        myList.middleDelete(six);
+
+        assertEquals(5, myList.head.next.next.next.data);
+
     }
 }
