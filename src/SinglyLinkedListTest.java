@@ -1,5 +1,9 @@
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.scene.*;
 import org.junit.Test;
+
+import java.util.HashMap;
+
 import static org.junit.Assert.*;
 
 /**
@@ -104,5 +108,25 @@ public class SinglyLinkedListTest {
         assertEquals(theoreticalAnswerwer.head.data, myList1plus2.head.data);
         assertEquals(theoreticalAnswerwer.head.next.data, myList1plus2.head.next.data);
         assertEquals(theoreticalAnswerwer.head.next.next.data, myList1plus2.head.next.next.data);
+        HashMap<Integer, Boolean> hash = new HashMap<>();
+//        System.out.println(hash.get(3));
+    }
+
+    @Test
+    public void circularTest(){
+        SinglyLinkedList myList1 = new SinglyLinkedList();
+        Node seven = new Node(7);
+        Node one = new Node(1);
+        Node six  = new Node(6);
+        myList1.addNode(seven);
+        myList1.addNode(one);
+        myList1.addNode(six);
+        myList1.addNode(seven);
+
+        SinglyLinkedList listJustForTest = new SinglyLinkedList();
+
+        Node loopNode = listJustForTest.circularList(myList1);
+
+        assertEquals(seven, loopNode);
     }
 }

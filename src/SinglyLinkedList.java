@@ -2,6 +2,7 @@ import javafx.scene.*;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by Fuad Hasbun on 11/17/2016.
@@ -206,4 +207,23 @@ public class SinglyLinkedList {
         return additionResult;
     }
 
+    /**
+     * Interview Question 2.6: Given a circular linked list, implement an algorithm which returns
+     * the node at the beginning of the loop
+     * @param circularList
+     * @return
+     */
+    public Node circularList(SinglyLinkedList circularList) {
+        HashMap<Node, Node> checkCircular = new HashMap<>();
+        Node ptr1 = circularList.head;
+        while(ptr1.next != null) {
+            if (checkCircular.containsKey(ptr1) && checkCircular.get(ptr1).equals(ptr1.next)) {
+                return ptr1;
+            } else {
+                checkCircular.put(ptr1, ptr1.next);
+            }
+            ptr1 = ptr1.next;
+        }
+        return null;
+    }
 }
