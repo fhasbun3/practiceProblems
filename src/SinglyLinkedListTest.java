@@ -69,6 +69,40 @@ public class SinglyLinkedListTest {
         myList.middleDelete(six);
 
         assertEquals(5, myList.head.next.next.next.data);
+    }
 
+    @Test
+    public void addLinkedListTest() {
+        SinglyLinkedList myList1 = new SinglyLinkedList();
+        Node seven = new Node(7);
+        Node one = new Node(1);
+        Node six  = new Node(6);
+        myList1.addNode(seven);
+        myList1.addNode(one);
+        myList1.addNode(six);
+
+        SinglyLinkedList myList2 = new SinglyLinkedList();
+        Node five = new Node(5);
+        Node nine = new Node(9);
+        Node two = new Node(2);
+        myList2.addNode(five);
+        myList2.addNode(nine);
+        myList2.addNode(two);
+
+        SinglyLinkedList listJustForTest = new SinglyLinkedList();
+
+        SinglyLinkedList myList1plus2 = listJustForTest.addLinkedList(myList1, myList2);
+
+        SinglyLinkedList theoreticalAnswerwer = new SinglyLinkedList();
+
+        Node two2 = new Node(2);
+        Node one2 = new Node(1);
+        Node nine2 = new Node(9);
+        theoreticalAnswerwer.addNode(two2);
+        theoreticalAnswerwer.addNode(one2);
+        theoreticalAnswerwer.addNode(nine2);
+        assertEquals(theoreticalAnswerwer.head.data, myList1plus2.head.data);
+        assertEquals(theoreticalAnswerwer.head.next.data, myList1plus2.head.next.data);
+        assertEquals(theoreticalAnswerwer.head.next.next.data, myList1plus2.head.next.next.data);
     }
 }

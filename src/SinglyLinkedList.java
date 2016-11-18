@@ -1,5 +1,8 @@
 import javafx.scene.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Created by Fuad Hasbun on 11/17/2016.
  */
@@ -128,6 +131,79 @@ public class SinglyLinkedList {
             nodeToDelete.data = nextNode.getData();
             nodeToDelete.next = nextNode.next;
         }
+    }
+
+    /**
+     * Interview Question 2.4: Write code to partition a linked list around a value x
+     * such that all nodes less than x come before all nodes greater than or equal to x
+     * Questions:
+     * What type of linked list (I'll assum singly linked)
+     * do we have to order the components on the left and right (I'll assume you don't)
+     * @param x
+     */
+    public void xPartition(int x) {
+        SinglyLinkedList before = new SinglyLinkedList();
+        SinglyLinkedList after = new SinglyLinkedList();
+        Node ptr1 = head;
+        while(ptr1 != null) {
+            if (ptr1.data < x) {
+                before.addToFront(ptr1.data);
+            } else {
+                after.addToFront(ptr1.data);
+            }
+            ptr1 = ptr1.next;
+        }
+        Node beforeHead = before.head;
+        while(beforeHead.next != null) {
+            beforeHead = beforeHead.next;
+        }
+        beforeHead.next = after.head;
+    }
+
+    /**
+     * Interview Question 2.5: You have two numbers represented by a linkd list, where each node contains
+     * a single digit. The digits are stored in reverse order, such that the 1's digit is at the head
+     * of the list. Write a function that adds the two numbers and returns the sum as a linked list
+     *
+     * Questions:
+     * Is it a singly-linked list?
+     * Any size restrictions?
+     * Are we given the size of the linked lists? (I'll assume we aren't)
+     * @param list1
+     * @param list2
+     * @return
+     */
+    public SinglyLinkedList addLinkedList(SinglyLinkedList list1, SinglyLinkedList list2) {
+        SinglyLinkedList additionResult = new SinglyLinkedList();
+        int overflow = 0; //value that overflows into the next position
+        if (list1.head == null || list2.head == null) {
+            return new SinglyLinkedList();
+        } else {
+            Node ptr1 = list1.head;
+            Node ptr2 = list2.head;
+            while (ptr1 != null || ptr2 != null) {
+                if (ptr1.getData() + ptr2.getData() > 9) {
+                    overflow = 1;
+                } else {
+                    overflow = 0;
+                }
+                if (overflow == 0) {
+                    additionResult.addNode(new Node(ptr1.data + ptr2.data));
+                } else {
+                    additionResult.addNode(new Node((ptr1.data + ptr2.data)%10));
+                    if (ptr1.next != null) {
+                        ptr1.next.data = ptr1.next.data + overflow;
+                    } else if (ptr2.next != null) {
+                        ptr2.next.data = ptr2.next.data + overflow;
+                    } else {
+                        System.out.println("Something went wrong");
+                    }
+                }
+                ptr1 = ptr1.next;
+                ptr2 = ptr2.next;
+            }
+        }
+        return additionResult;
     }
 
 }
