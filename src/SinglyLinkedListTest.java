@@ -129,4 +129,30 @@ public class SinglyLinkedListTest {
 
         assertEquals(seven, loopNode);
     }
+
+    @Test
+    public void palindromeTestEven() {
+        SinglyLinkedList myList = new SinglyLinkedList();
+        SinglyLinkedList myList1 = new SinglyLinkedList();
+        myList1.addToBack(0);
+        myList1.addToBack(1);
+        myList1.addToBack(3);
+        myList1.addToBack(3);
+        myList1.addToBack(1);
+        myList1.addToBack(0);
+        assertEquals(true, myList.isPalindrome(myList1));
+    }
+
+    @Test
+    public void palindromeTestOdd() {
+        SinglyLinkedList myList = new SinglyLinkedList();
+        SinglyLinkedList myList2 = new SinglyLinkedList();
+        myList2.addToBack(0);
+        myList2.addToBack(1);
+        myList2.addToBack(2);
+        myList2.addToBack(1);
+        myList2.addToBack(0);
+        assertEquals(true, myList.isPalindrome(myList2));
+    }
+
 }

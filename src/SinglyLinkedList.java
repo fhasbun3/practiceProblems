@@ -1,8 +1,11 @@
 import javafx.scene.*;
+import org.omg.CORBA.INTERNAL;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Queue;
+import java.util.Stack;
 
 /**
  * Created by Fuad Hasbun on 11/17/2016.
@@ -225,5 +228,57 @@ public class SinglyLinkedList {
             ptr1 = ptr1.next;
         }
         return null;
+    }
+
+    /**
+     * Question 2.7 Implement a function to check if a linked list is a palindrome
+     * Questions:
+     * Singly linked?
+     * Do we have access to the tail?
+     * Access to the size of the linked list?
+     * Assumptions:
+     * Singly-linked
+     * no access to tail
+     * no access to size
+     * @param palindromeLL
+     * @return
+     */
+    public boolean isPalindrome(SinglyLinkedList palindromeLL) {
+        boolean answer = true;
+        int pLLsize = palindromeLL.size;
+        Stack<Integer> evenStack = new Stack<>();
+        Stack<Integer> oddStack = new Stack<>();
+        Node slowRunner = palindromeLL.head;
+        Node fastRunner = palindromeLL.head;
+
+        while (fastRunner != null && fastRunner.next != null) {
+                evenStack.add(slowRunner.data);
+                oddStack.add(slowRunner.data);
+                slowRunner = slowRunner.next;
+                fastRunner = fastRunner.next.next;
+        }
+
+        Node evenPtr = slowRunner;
+        Node oddPtr = slowRunner.next;
+
+        boolean evenPalindrome = true;
+        boolean oddPalindrome = true;
+        while (evenPtr != null) {
+            if(evenPtr.data == evenStack.pop()) {
+                evenPtr = evenPtr.next;
+            } else {
+                evenPtr = null;
+                evenPalindrome = false;
+            }
+        }
+        while (oddPtr != null) {
+            if(oddPtr.data == oddStack.pop()) {
+                oddPtr = oddPtr.next;
+            } else {
+                oddPtr = null;
+                oddPalindrome = false;
+            }
+        }
+        return  (evenPalindrome || oddPalindrome);
     }
 }
