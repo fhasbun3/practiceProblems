@@ -155,4 +155,10 @@ public class SinglyLinkedListTest {
         assertEquals(true, myList.isPalindrome(myList2));
     }
 
+    @Test
+    public void palindromeTestNull( ){
+        SinglyLinkedList myList = new SinglyLinkedList();
+        assertEquals(false, myList.isPalindrome(null));
+    }
+
 }

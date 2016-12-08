@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d6dbcc3-df06-4097-8f12-5504aef184e3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SinglyLinkedList.java" afterPath="$PROJECT_DIR$/src/SinglyLinkedList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SinglyLinkedListTest.java" afterPath="$PROJECT_DIR$/src/SinglyLinkedListTest.java" />
     </list>
@@ -38,20 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SinglyLinkedList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SinglyLinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SinglyLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="258" column="9" selection-start-line="258" selection-start-column="9" selection-end-line="258" selection-end-column="9" />
+            <state relative-caret-position="223">
+              <caret line="247" column="25" selection-start-line="247" selection-start-column="25" selection-end-line="247" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SinglyLinkedListTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SinglyLinkedListTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SinglyLinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="245">
               <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,8 +105,8 @@
         <option value="$PROJECT_DIR$/src/Node.java" />
         <option value="$PROJECT_DIR$/src/SinglyLinkedListTest.groovy" />
         <option value="$PROJECT_DIR$/src/Test/SinglyLinkedListTest.java" />
-        <option value="$PROJECT_DIR$/src/SinglyLinkedListTest.java" />
         <option value="$PROJECT_DIR$/src/SinglyLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/SinglyLinkedListTest.java" />
       </list>
     </option>
   </component>
@@ -906,14 +905,11 @@
       <workItem from="1479457718321" duration="2932000" />
       <workItem from="1479496175903" duration="27000" />
       <workItem from="1479785185810" duration="624000" />
-      <workItem from="1481150283515" duration="8124000" />
+      <workItem from="1481150283515" duration="8560000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SinglyLinkedListTest - 2016.12.07 at 21h 29m 12s.xml">
-      <configuration name="SinglyLinkedListTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SinglyLinkedListTest - 2016.12.07 at 21h 29m 23s.xml">
       <configuration name="SinglyLinkedListTest" configurationId="JUnit" />
     </history-entry>
@@ -941,9 +937,12 @@
     <history-entry file="SinglyLinkedListTest - 2016.12.07 at 21h 48m 45s.xml">
       <configuration name="SinglyLinkedListTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SinglyLinkedListTest - 2016.12.07 at 21h 56m 42s.xml">
+      <configuration name="SinglyLinkedListTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52742000" />
+    <option name="totallyTimeSpent" value="53178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -991,14 +990,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SinglyLinkedListTest.java</url>
-          <line>154</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
@@ -1379,21 +1370,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SinglyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="247" column="25" selection-start-line="247" selection-start-column="25" selection-end-line="247" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SinglyLinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="245">
           <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SinglyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="258" column="9" selection-start-line="258" selection-start-column="9" selection-end-line="258" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>

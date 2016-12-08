@@ -244,6 +244,9 @@ public class SinglyLinkedList {
      * @return
      */
     public boolean isPalindrome(SinglyLinkedList palindromeLL) {
+        if (palindromeLL == null) {
+            return false;
+        }
         boolean answer = true;
         int pLLsize = palindromeLL.size;
         Stack<Integer> evenStack = new Stack<>();
