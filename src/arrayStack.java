@@ -14,35 +14,13 @@ import java.util.Arrays;
  * My implementation: Dynamic stacks
  */
 public class arrayStack {
-    public static void main(String[] args) {
-        arrayStack myarrayStack = new arrayStack(new char[2], 0,0,0);
-        arrayStack.setTripleStack(9);
-        System.out.println("Size: " + arrayStack.array[0]);
-        System.out.println("stack1: " + arrayStack.stack1);
-        System.out.println("stack2: " + arrayStack.stack2);
-        System.out.println("stack3: " + arrayStack.stack3);
-        myarrayStack.push1('a');
-        myarrayStack.push2('b');
-        myarrayStack.push3('c');
-        System.out.println(Arrays.toString(myarrayStack.array));
-        System.out.println("stack1: " + arrayStack.stack1);
-        System.out.println("stack2: " + arrayStack.stack2);
-        System.out.println("stack3: " + arrayStack.stack3);
-
-    }
 
     //given array
     static char[] array;
 
     //hold 3 pointers for each stack
     static int stack1, stack2, stack3;
-
-    public arrayStack(char[] array, int stack1, int stack2, int stack3) {
-        this.array = array;
-        this.stack1 = stack1;
-        this.stack2 = stack2;
-        this.stack3 = stack3;
-    }
+    static int ptr1, ptr2, ptr3;
 
     /**
      * This method sets up the array with the pointers
@@ -62,11 +40,38 @@ public class arrayStack {
      * @param value
      */
     public static void push1(char value) {
-        if (array[stack1] == 0) {
-            array[stack1] = value;
-            stack1++;
-        } else {
-            //TODO: apply logic for overflow
+        //Case were stack is empty
+        if (array[ptr1] == 0) {
+            array[ptr1] = value;
+            ptr1++;
+        }
+        //Case were the stack starts to overflow to second stack
+        else if (ptr1 == stack2) {
+            array[ptr1] = value;
+            ptr1++;
+            if (stack2 == ptr2) {
+                stack2++;
+                ptr2++;
+            } else {
+                stack2++;
+            }
+        }
+        //Case were the stack starts to overflow to third stack
+        else if (ptr1 == stack3) {
+            array[ptr1] = value;
+            ptr1++;
+            if (stack3 == ptr3) {
+                stack3++;
+                ptr3++;
+            } else {
+                stack3++;
+            }
+        }
+        else if (ptr1 == array.length - 1) {
+            //automatically pop a value and add
+            System.out.println("No more stack space, poping last value to push current value");
+            pop1();
+            array[ptr1] = value;
         }
     }
 
@@ -100,7 +105,7 @@ public class arrayStack {
      * This method returns poped value from stack1
      * @return
      */
-    public char pop1() {
+    public static char pop1() {
         return '1';
     }
 
@@ -108,7 +113,7 @@ public class arrayStack {
      * This method returns poped value from stack2
      * @return
      */
-    public char pop2() {
+    public static char pop2() {
         return '2';
     }
 
@@ -116,7 +121,7 @@ public class arrayStack {
      * This method returns poped value from stack3
      * @return
      */
-    public char pop3() {
+    public static char pop3() {
         return '3';
     }
 
