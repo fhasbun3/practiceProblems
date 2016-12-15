@@ -4,15 +4,16 @@
 public class Stack<T> {
     public GenericNode<T> top;
     public int size = 0;
-
     /**
      * This method pushes into the stack
      * @param nodeToAdd
      */
-    public void push(GenericNode nodeToAdd) {
+    public void push(GenericNode<T> nodeToAdd) {
         if (top == null) {
             top = nodeToAdd;
+            top.setCurrentMin(nodeToAdd);
         } else {
+            if (nodeToAdd.currentMin.data <= top.currentMin.data)
             nodeToAdd.next = top;
             top = nodeToAdd;
         }
@@ -28,5 +29,26 @@ public class Stack<T> {
             size--;
         }
         return  nodeToPop;
+    }
+
+    /**
+     * Interview Question 3.2: How would you design a stack which, in addition to push
+     * and pop, also has a function min which returns the minimum element?
+     * Push, pop, and min should all operate in O(1) time.
+     *
+     * Questions:
+     * Can I edit the conventional push and pop functions?
+     * Can I add global variables?
+     *
+     * My implementation:
+     * Every node will have an element called currentMin,
+     * which will hold the minimum node at the moment said
+     * node was pushed into the stack. In other words,
+     * the node at the top of the stack will have the
+     * min value
+     * @return
+     */
+    public GenericNode<T> min() {
+        return top.currentMin;
     }
 }

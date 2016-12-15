@@ -4,6 +4,7 @@
 public class GenericNode<T> {
     public GenericNode<T> next;
     public T data;
+    public GenericNode<T> currentMin;
 
     public GenericNode(T data, GenericNode next) {
         this.data = data;
@@ -18,13 +19,18 @@ public class GenericNode<T> {
         return data;
     }
 
+    public GenericNode<T> getcurrentMin() { return currentMin; }
+
     public GenericNode<T> getNext() {
         return next;
     }
 
-    public void setNext(GenericNode next) {
+    public void setNext(GenericNode<T> next) {
         this.next = next;
     }
+
+    public void setCurrentMin(GenericNode<T> currentMin) { this.currentMin = currentMin; }
+
     @Override
     public String toString() {
         return "Node Containing: " + data;

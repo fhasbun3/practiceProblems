@@ -12,6 +12,14 @@ import java.util.Arrays;
  * What to do if one stack goes over given space?
  * Resize into next stack?
  * My implementation: Dynamic stacks
+ *
+ * My Answer:
+ * Equally allocate space for the three stacks in the array
+ * have a pointer per stack and a base pointer per stack
+ * To push move the pointer (not base pointer)
+ * To pop move the pointer (not base pointer)
+ * Handle overflow by using up space from the neighboring stack
+ * //TODO: Implementation not complete
  */
 public class arrayStack {
 
@@ -33,6 +41,9 @@ public class arrayStack {
         stack2 = size/3;
         stack1 = 0;
         stack3 = 2 * stack2;
+        ptr2 = size/3;
+        ptr1 = 0;
+        ptr3 = 2 * stack2;
     }
 
     /**
@@ -80,11 +91,27 @@ public class arrayStack {
      * @param value
      */
     public static void push2(char value) {
-        if (array[stack2] == 0) {
-            array[stack2] = value;
-            stack2++;
-        } else {
-            //TODO: apply logic for overflow
+        //Case were stack is empty
+        if (array[ptr2] == 0) {
+            array[ptr2] = value;
+            ptr2++;
+        }
+        //Case were the stack starts to overflow to third stack
+        else if (ptr2 == stack3) {
+            array[ptr2] = value;
+            ptr2++;
+            if (stack3 == ptr3) {
+                stack3++;
+                ptr3++;
+            } else {
+                stack3++;
+            }
+        }
+        else if (ptr2 == array.length - 1) {
+            //automatically pop a value and add
+            System.out.println("No more stack space, poping last value to push current value");
+            pop1();
+            array[ptr2] = value;
         }
     }
 
@@ -93,11 +120,15 @@ public class arrayStack {
      * @param value
      */
     public static void push3(char value) {
-        if (array[stack3] == 0) {
-            array[stack3] = value;
-            stack3++;
-        } else {
-            //TODO: apply logic for overflow
+        //Case were stack is empty
+        if (array[ptr3] == 0) {
+            array[ptr3] = value;
+            ptr3++;
+        } else if (ptr3 == array.length - 1) {
+            //automatically pop a value and add
+            System.out.println("No more stack space, poping last value to push current value");
+            pop1();
+            array[ptr3] = value;
         }
     }
 

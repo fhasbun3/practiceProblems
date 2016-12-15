@@ -3,6 +3,7 @@ import static org.junit.Assert.*;
 /**
  * Created by Fuad Hasbun on 12/11/2016.
  */
+//TODO: Implementation not complete
 public class arrayStackTest {
 
     @Test
@@ -45,5 +46,19 @@ public class arrayStackTest {
         myStack.push3('i');
 
         assertEquals(3, myStack.ptr1);
+
+        myStack.push1('j');
+
+        assertEquals(4, myStack.ptr1);
+        assertEquals(4, myStack.stack2);
+        assertEquals(6, myStack.ptr2);
+        assertEquals('j', myStack.array[3]);
+
+        myStack.push1('k');
+
+        assertEquals(5, myStack.ptr1);
+        assertEquals(5, myStack.stack2);
+        assertEquals(6, myStack.ptr2);
+        assertEquals('k', myStack.array[4]);
     }
 }
