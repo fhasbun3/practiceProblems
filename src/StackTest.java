@@ -1,3 +1,4 @@
+import com.sun.deploy.xml.GeneralEntity;
 import org.junit.Test;
 import static org.junit.Assert.*;
 /**
@@ -50,5 +51,20 @@ public class StackTest {
         assertEquals(2, popedValue);
         int headValue = intStack.top.data;
         assertEquals(1, headValue);
+    }
+
+    @Test
+    public void checkMin() {
+        Stack<Integer> intStack = new Stack<>();
+        GenericNode<Integer> one = new GenericNode<>(1);
+        GenericNode<Integer> two = new GenericNode<>(2);
+        GenericNode<Integer> three = new GenericNode<>(3);
+        GenericNode<Integer> four = new GenericNode<>(4);
+        GenericNode<Integer> five = new GenericNode<>(5);
+
+        intStack.push(five);
+        assertEquals(five, intStack.min());
+        intStack.push(four);
+        assertEquals(four, intStack.min());
     }
 }

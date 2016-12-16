@@ -1,7 +1,9 @@
+import java.util.Comparator;
+
 /**
  * Created by Fuad Hasbun on 12/7/2016.
  */
-public class Stack<T> {
+public class Stack<T extends Comparable<? super T>> {
     public GenericNode<T> top;
     public int size = 0;
     /**
@@ -13,9 +15,14 @@ public class Stack<T> {
             top = nodeToAdd;
             top.setCurrentMin(nodeToAdd);
         } else {
-            if (nodeToAdd.currentMin.data <= top.currentMin.data)
             nodeToAdd.next = top;
             top = nodeToAdd;
+            if (nodeToAdd.compareTo(top) < 0) {
+                top.setCurrentMin(nodeToAdd);
+            } else {
+                System.out.println(nodeToAdd.compareTo(top));
+                top.setCurrentMin(top.next.currentMin);
+            }
         }
         size++;
     }

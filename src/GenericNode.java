@@ -1,7 +1,7 @@
 /**
  * Created by Fuad Hasbun on 12/7/2016.
  */
-public class GenericNode<T> {
+public class GenericNode<T extends Comparable<? super T>> {
     public GenericNode<T> next;
     public T data;
     public GenericNode<T> currentMin;
@@ -34,5 +34,9 @@ public class GenericNode<T> {
     @Override
     public String toString() {
         return "Node Containing: " + data;
+    }
+
+    public int compareTo(GenericNode<T> currentMin) {
+        return this.data.compareTo(currentMin.getData());
     }
 }

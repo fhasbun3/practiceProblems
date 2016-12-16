@@ -1,7 +1,7 @@
 /**
  * Created by Fuad Hasbun on 12/7/2016.
  */
-public class Queue<T> {
+public class Queue<T extends Comparable<T>> {
     GenericNode<T> front;
     int size;
 
