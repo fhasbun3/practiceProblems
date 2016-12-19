@@ -1,3 +1,5 @@
+package StacksAndQueues;
+
 /**
  * Created by Fuad Hasbun on 12/7/2016.
  */
@@ -8,7 +10,7 @@ public class GenericNode<T extends Comparable<? super T>> {
 
     public GenericNode(T data, GenericNode next) {
         this.data = data;
-        this.next = next;
+        this.next = null;
     }
 
     public GenericNode(T data) {
@@ -33,7 +35,7 @@ public class GenericNode<T extends Comparable<? super T>> {
 
     @Override
     public String toString() {
-        return "Node Containing: " + data;
+        return "LinkedLists.Node Containing: " + data;
     }
 
     public int compareTo(GenericNode<T> currentMin) {

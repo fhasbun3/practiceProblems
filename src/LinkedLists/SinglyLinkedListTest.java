@@ -1,5 +1,5 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import javafx.scene.*;
+package LinkedLists;
+
 import org.junit.Test;
 
 import java.util.HashMap;

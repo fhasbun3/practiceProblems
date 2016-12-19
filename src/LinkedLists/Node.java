@@ -1,3 +1,5 @@
+package LinkedLists;
+
 /**
  * Created by Fuad Hasbun on 11/17/2016.
  */
@@ -27,7 +29,7 @@ public class Node {
     }
     @Override
     public String toString() {
-        return "Node Containing: " + data;
+        return "LinkedLists.Node Containing: " + data;
     }
 
 }

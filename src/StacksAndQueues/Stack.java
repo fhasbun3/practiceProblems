@@ -1,4 +1,4 @@
-import java.util.Comparator;
+package StacksAndQueues;
 
 /**
  * Created by Fuad Hasbun on 12/7/2016.
@@ -14,6 +14,7 @@ public class Stack<T extends Comparable<? super T>> {
         if (top == null) {
             top = nodeToAdd;
             top.setCurrentMin(nodeToAdd);
+            top.setNext(null);
         } else {
             nodeToAdd.next = top;
             top = nodeToAdd;

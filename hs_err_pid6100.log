@@ -27,7 +27,7 @@ R8 =0x0000000017647000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x00
 R12=0x0000000000000000, R13=0x00000000176527e8, R14=0x0000000000000000, R15=0x0000000000000000
 RIP=0x000000005744a0a5, EFLAGS=0x0000000000010206
 
-Top of Stack: (sp=0x0000000018d8f0a0)
+Top of StacksAndQueues.Stack: (sp=0x0000000018d8f0a0)
 0x0000000018d8f0a0:   0000000017647000 0000000017647000
 0x0000000018d8f0b0:   0000000018d8f168 0000000057652f0b
 0x0000000018d8f0c0:   0000000017647000 000000005766f76d
@@ -72,7 +72,7 @@ R14=0x0000000000000000 is an unknown value
 R15=0x0000000000000000 is an unknown value
 
 
-Stack: [0x0000000018c90000,0x0000000018d90000],  sp=0x0000000018d8f0a0,  free space=1020k
+StacksAndQueues.Stack: [0x0000000018c90000,0x0000000018d90000],  sp=0x0000000018d8f0a0,  free space=1020k
 Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
 V  [jvm.dll+0x12a0a5]
 V  [jvm.dll+0x34f76d]
@@ -157,7 +157,7 @@ Deoptimization events (0 events):
 No events
 
 Internal exceptions (2 events):
-Event: 0.046 Thread 0x00000000029f2800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d5d87cc0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u101\7261\hotspot\sM¡Ä–†§?
+Event: 0.046 Thread 0x00000000029f2800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d5d87cc0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u101\7261\hotspot\sMï¿½Ä–ï¿½ï¿½?
 Event: 0.046 Thread 0x00000000029f2800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d5d87fa8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u101\7261\hotspot\src\share\vm\prims\
 
 Events (10 events):

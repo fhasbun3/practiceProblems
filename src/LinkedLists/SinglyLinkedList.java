@@ -1,10 +1,6 @@
-import javafx.scene.*;
-import org.omg.CORBA.INTERNAL;
+package LinkedLists;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Queue;
 import java.util.Stack;
 
 /**
