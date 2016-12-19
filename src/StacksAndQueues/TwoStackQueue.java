@@ -37,17 +37,20 @@ public class TwoStackQueue<T extends Comparable<? super T>> {
                 }
                 stack1.push(nodeToAdd);
             }
+            lastOperation = false;
         }
     }
 
     public GenericNode<T> dequeue(){
         if (lastOperation) {
+            lastOperation = true;
             return stack2.pop();
         } else {
             //Move everything into stack2
             while(stack1.size != 1) {
                 stack2.push(stack1.pop());
             }
+            lastOperation = true;
             return stack1.pop();
         }
     }

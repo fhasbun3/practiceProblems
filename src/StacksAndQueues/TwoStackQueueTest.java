@@ -55,6 +55,10 @@ public class TwoStackQueueTest {
         myQueue.dequeue();
         assertEquals(1, myQueue.stack2.size);
         assertEquals(0, myQueue.stack1.size);
+        GenericNode<Integer> four = new GenericNode<Integer>(4);
+        myQueue.enqueue(four);
+        assertEquals(2, myQueue.stack1.size);
+        assertEquals(0, myQueue.stack2.size);
     }
 
 }

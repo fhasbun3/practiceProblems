@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d6dbcc3-df06-4097-8f12-5504aef184e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StacksAndQueues/Disk.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StacksAndQueues/SetOfStacks.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StacksAndQueues/SetOfStacksTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueue.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/GenericNode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/Queue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/QueueTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/SinglyLinkedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/SinglyLinkedListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/Stack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/StackTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/arrayStack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/interviewCoding/arrayStackTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GenericNode.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/GenericNode.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Node.java" afterPath="$PROJECT_DIR$/src/LinkedLists/Node.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Queue.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/Queue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QueueTest.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/QueueTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SinglyLinkedList.java" afterPath="$PROJECT_DIR$/src/LinkedLists/SinglyLinkedList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SinglyLinkedListTest.java" afterPath="$PROJECT_DIR$/src/LinkedLists/SinglyLinkedListTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Stack.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/Stack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/StackTest.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/StackTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arrayStack.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/arrayStack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/arrayStackTest.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/arrayStackTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hs_err_pid6100.log" afterPath="$PROJECT_DIR$/hs_err_pid6100.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueue.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java" afterPath="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java" />
     </list>
     <ignored path="interviewCoding.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -103,8 +78,8 @@
       <file leaf-file-name="TwoStackQueue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1108">
-              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+            <state relative-caret-position="345">
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -113,8 +88,8 @@
       <file leaf-file-name="TwoStackQueueTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+            <state relative-caret-position="517">
+              <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#429#438#0" expanded="true" />
@@ -125,6 +100,7 @@
                 <element signature="e#1559#1568#0" expanded="true" />
                 <element signature="e#1653#1662#0" expanded="true" />
                 <element signature="e#1749#1758#0" expanded="true" />
+                <element signature="e#2084#2093#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -223,8 +199,8 @@
         <option value="$PROJECT_DIR$/src/StacksAndQueues/Disk.java" />
         <option value="$PROJECT_DIR$/src/StacksAndQueues/GenericNode.java" />
         <option value="$PROJECT_DIR$/src/StacksAndQueues/Stack.java" />
-        <option value="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java" />
         <option value="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueue.java" />
+        <option value="$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java" />
       </list>
     </option>
   </component>
@@ -358,7 +334,7 @@
       <recent name="C:\Users\Fuad Hasbun\IdeaProjects\practiceProblems\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SetOfStacksTest">
+  <component name="RunManager" selected="JUnit.TwoStackQueueTest">
     <configuration default="false" name="StackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="interviewCoding" />
@@ -1071,8 +1047,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SetOfStacksTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TwoStackQueueTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TwoStackQueueTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SetOfStacksTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.arrayStackTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.StackTest" />
         <item index="4" class="java.lang.String" itemvalue="Application.arrayStack" />
@@ -1103,28 +1079,13 @@
       <workItem from="1479785185810" duration="624000" />
       <workItem from="1481150283515" duration="14185000" />
       <workItem from="1481407644397" duration="29337000" />
-      <workItem from="1482053746532" duration="4099000" />
+      <workItem from="1482053746532" duration="4808000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="SetOfStacksTest - 2016.12.19 at 04h 18m 27s.xml">
       <configuration name="SetOfStacksTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TwoStackQueueTest - 2016.12.18 at 05h 24m 03s.xml">
-      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TwoStackQueueTest - 2016.12.18 at 05h 28m 16s.xml">
-      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TwoStackQueueTest - 2016.12.18 at 05h 28m 22s.xml">
-      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TwoStackQueueTest - 2016.12.18 at 05h 28m 36s.xml">
-      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TwoStackQueueTest - 2016.12.18 at 05h 28m 50s.xml">
-      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TwoStackQueueTest - 2016.12.18 at 05h 31m 27s.xml">
       <configuration name="TwoStackQueueTest" configurationId="JUnit" />
@@ -1138,13 +1099,28 @@
     <history-entry file="TwoStackQueueTest - 2016.12.19 at 04h 16m 24s.xml">
       <configuration name="TwoStackQueueTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TwoStackQueueTest - 2016.12.19 at 04h 27m 55s.xml">
+      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TwoStackQueueTest - 2016.12.19 at 04h 27m 56s.xml">
+      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TwoStackQueueTest - 2016.12.19 at 04h 29m 00s.xml">
+      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TwoStackQueueTest - 2016.12.19 at 04h 29m 30s.xml">
+      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TwoStackQueueTest - 2016.12.19 at 04h 30m 35s.xml">
+      <configuration name="TwoStackQueueTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92239000" />
+    <option name="totallyTimeSpent" value="92948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1195,14 +1171,8 @@
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="62" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1608,16 +1578,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1108">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StacksAndQueues/TwoStackQueueTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        <state relative-caret-position="517">
+          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#429#438#0" expanded="true" />
@@ -1628,6 +1598,7 @@
             <element signature="e#1559#1568#0" expanded="true" />
             <element signature="e#1653#1662#0" expanded="true" />
             <element signature="e#1749#1758#0" expanded="true" />
+            <element signature="e#2084#2093#0" expanded="true" />
           </folding>
         </state>
       </provider>
