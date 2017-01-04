@@ -7,7 +7,7 @@ package StacksAndQueues;
 import java.util.NoSuchElementException;
 
 /**
- * Implement a Queue class which implements a queue
+ * Interview Question 3.5: Implement a Queue class which implements a queue
  * using two stacks
  */
 public class TwoStackQueue<T extends Comparable<? super T>> {
