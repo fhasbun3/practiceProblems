@@ -38,7 +38,8 @@ public class StandardOperations {
      * @return
      */
     public boolean[] fitMtoN(boolean[] m, boolean[] n) {
-
+        boolean[] myBool = new boolean[3];
+        return myBool;
     }
 
 }
